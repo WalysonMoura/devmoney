@@ -1,16 +1,16 @@
-import Fastify from 'fastify'
+import Fastify from "fastify";
 
 const app = Fastify({
   logger: true,
-})
+});
 
-app.get('/', async (req, reply) => {
-  return reply.status(200).type('text/html').send(html)
-})
+app.get("/", async (req, reply) => {
+  return reply.status(200).type("text/html").send(html);
+});
 
 export default async function handler(req, reply) {
-  await app.ready()
-  app.server.emit('request', req, reply)
+  await app.ready();
+  app.server.emit("request", req, reply);
 }
 
 const html = `
@@ -63,4 +63,4 @@ export default async function handler(req: any, res: any) {
       to get started.
   </body>
 </html>
-`
+`;
