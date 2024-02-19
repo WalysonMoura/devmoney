@@ -1,4 +1,5 @@
-import knex, { Knex } from "knex";
+import { Knex, knex as setupKnex } from "knex";
+
 import { env } from "./env";
 
 export const config: Knex.Config = {
@@ -13,3 +14,5 @@ export const config: Knex.Config = {
     directory: "./db/migrations",
   },
 };
+
+export const knex = setupKnex(config);
