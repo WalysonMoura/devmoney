@@ -3,7 +3,14 @@
   "repository": "https://github.com/vercel/examples.git",
   "license": "MIT",
   "private": true,
- 
+  "tsup": {
+    "entry": [
+      "src/index.ts"
+    ],
+    "splitting": false,
+    "sourcemap": true,
+    "clean": true
+  },
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "migrate:latest": "knex migrate:latest",
