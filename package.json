@@ -8,7 +8,7 @@
     "dev": "tsx watch src/server.ts",
     "migrate:latest": "knex migrate:latest",
     "lint": "eslint src --ext .ts --fix",
-    "build": "tsup src --output build/bundle.js",
+    "build": "tsup src --dts --outdir build/",
     "test": "vitest"
   },
   "dependencies": {
