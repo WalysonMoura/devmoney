@@ -25,6 +25,7 @@ yarn-error.log*
 .env.local
 .env.development.local
 .env.test.local
+.env.test
 .env.production.local
 
 # Vercel
@@ -32,3 +33,9 @@ yarn-error.log*
 
 # Turborepo
 .turbo
+
+#database
+db/*.db
+
+# Build
+build

@@ -1,9 +1,9 @@
 import type { Knex } from "knex";
-
+import { config } from './src/database'
 // Update with your config settings.
 import { env } from "./src/env";
 
-const config: { [key: string]: Knex.Config } = {
+export const configk: { [key: string]: Knex.Config } = {
   development: {
     client:  env.DATABASE_CLIENT,
     connection: {
